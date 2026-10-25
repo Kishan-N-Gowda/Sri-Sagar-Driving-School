@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+  --font-display: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  font-family: 'Plus Jakarta Sans', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #faf8f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-serif,
+.font-display {
+  font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.font-sans,
+.font-body {
+  font-family: 'Plus Jakarta Sans', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+input, select, textarea {
+  width: 100%;
+  border: 1px solid #e2e0db;
+  border-radius: 0.875rem;
+  background: #fff;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #0a1628;
+  box-shadow: 0 0 0 4px rgba(10, 22, 40, 0.08);
+}
+input::placeholder, textarea::placeholder { color: #aab2bd; }
+
+::selection { background: #0a1628; color: #faf8f4; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* SociableKit Google Reviews clean layout & zero excess blank space */
+.sk-ww-google-reviews {
+  min-height: auto !important;
+  height: auto !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.sk-ww-google-reviews > div {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.sk-ww-google-reviews iframe {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.sk-ww-google-reviews .sk-reviews-container,
+.sk-ww-google-reviews .sk_reviews_container,
+.sk-ww-google-reviews .sk-reviews-grid,
+.sk-ww-google-reviews .sk_reviews_grid,
+.sk-ww-google-reviews .sk-events-container,
+.sk-ww-google-reviews .sk-grid-item-container,
+.sk-ww-google-reviews .sk_slider_container,
+.sk-ww-google-reviews .sk_reviews_slider,
+.sk-ww-google-reviews .sk_review_list {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+
+.sk-ww-google-reviews .sk_branding,
+.sk-ww-google-reviews .sk-branding,
+.sk-ww-google-reviews .sociablekit-branding,
+.sk-ww-google-reviews .sk-watermark,
+.sk-ww-google-reviews .sk-powered-by {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+.sk-ww-google-reviews .sk-reviews-pagination,
+.sk-ww-google-reviews .sk_pagination,
+.sk-ww-google-reviews .sk_reviews_navigation {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in { animation: fadeIn 0.4s ease both; }
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-scale-in { animation: scaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Sri Sagar Driving School",
+  "description": "Professional driving lessons, instructor bookings, and school management app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
